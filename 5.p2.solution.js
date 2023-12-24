@@ -34,6 +34,7 @@ const getNewSourceRanges = (sourceRanges, section) => {
     while (i < unclaimedRanges.length) {
       const range = unclaimedRanges[i];
 
+      // 4 cases of overlapping intervals
       // range starts in middle of map and ends outside
       if (
         range[0] >= map.source[0] &&

@@ -3,6 +3,7 @@ import { getFileContentsAsString } from "./helpers.js";
 const getMinLocation = (data) => {
   const lines = data.split("\n");
   
+  // Brute force method
   let minLocation = null;
   let seeds = lines[0].split(":")[1].trim().split(" ").map((str) => { return parseInt(str) });
   for (const seed of seeds) {
